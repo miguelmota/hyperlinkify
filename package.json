@@ -1,6 +1,6 @@
 {
   "name": "hyperlinkify",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "hyperlink urls in text",
   "main": "hyperlinkify.js",
   "scripts": {

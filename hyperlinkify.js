@@ -1,10 +1,12 @@
 (function(root) {
   'use strict';
 
-  var matcher = /^(?:\w+:)?\/\/([^\s\.]+\.\S{2}|localhost[\:?\d]*)\S*$/
+  var urlMatcher = /^(?:\w+:)?\/\/([^\s\.]+\.\S{2}|localhost[\:?\d]*)\S*$/
+
+  var splitMatcher = /((?:\w+:)?\/\/(?:[^\s\.]+\.\S{2}|localhost[\:?\d]*)\S*)/g
 
   function isUrl(string){
-    return matcher.test(string)
+    return urlMatcher.test(string)
   }
 
   function hyperlinkify(text, attrsCallback) {
@@ -14,7 +16,7 @@
 
     if (typeof text !== 'string') return ''
 
-    return text.split(' ').map(function(value) {
+    return text.split(splitMatcher).map(function(value) {
       if (isUrl(value)) {
         var attrsObj = {}
         var attrs = []
@@ -37,7 +39,7 @@
       }
 
       return value
-    }).join(' ')
+    }).join('')
   }
 
   if (typeof exports !== 'undefined') {
