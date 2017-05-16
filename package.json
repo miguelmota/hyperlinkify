@@ -4,7 +4,7 @@
   "description": "hyperlink urls in text",
   "main": "hyperlinkify.js",
   "scripts": {
-    "test": "tape ./test/*.js"
+    "test": "node test/index.js"
   },
   "bin": {
     "hyperlinkify": "bin/index.js"

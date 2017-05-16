@@ -1,6 +1,6 @@
 # hyperlinkify
 
-> hyperlink urls in text"
+> hyperlink urls in text
 
 ## Install
 
@@ -15,27 +15,27 @@ basic example
 ```javascript
 const hyperlinkify = require('hyperlinkify')
 
-const url = 'visit http://example.com for more info'
+const text = 'visit http://example.com for more info'
 
-console.log(hyperlinkify(url))
+console.log(hyperlinkify(text))
 // visit <a href="http://example.com">http://example.com</a> for more info
 ```
 
-with attributes
+example with attributes
 
 ```javascript
-const url = 'visit http://example.com for more info'
+const text = 'visit http://example.com for more info'
 
-console.log(hyperlinkify(url, {target: '_blank', 'data-foo': 'bar'}))
+console.log(hyperlinkify(text, {target: '_blank', 'data-foo': 'bar'}))
 // visit <a href="http://example.com" target="_blank" data-foo="bar">http://example.com</a> for more info
 ```
 
-with conditional attributes
+example with conditional attributes
 
 ```javascript
-const url = 'hello http://example.com world http://localhost:8000'
+const text = 'hello http://example.com world http://localhost:8000'
 
-const result = hyperlinkify(url, url => {
+const result = hyperlinkify(text, url => {
   const attrs = {}
 
   if (url.indexOf('localhost') === -1) {
