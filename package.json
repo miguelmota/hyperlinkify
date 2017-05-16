@@ -1,0 +1,31 @@
+{
+  "name": "hyperlinkify",
+  "version": "0.0.1",
+  "description": "hyperlink urls in text",
+  "main": "hyperlinkify.js",
+  "scripts": {
+    "test": "tape ./test/*.js"
+  },
+  "bin": {
+    "hyperlinkify": "bin/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/miguelmota/hyperlinkify"
+  },
+  "bugs": {
+    "url": "https://github.com/miguelmota/hyperlinkify/issues"
+  },
+  "homepage": "https://github.com/miguelmota/hyperlinkify",
+  "keywords": [
+    "hyperlink",
+    "text",
+    "html"
+  ],
+  "author": "Miguel Mota <hello@miguelmota.com> (http://www.miguelmota.com/)",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "tape": "^4.6.3"
+  }
+}
